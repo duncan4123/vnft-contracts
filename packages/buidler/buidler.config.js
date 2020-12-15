@@ -49,6 +49,9 @@ module.exports = {
         notice no mnemonic here? it will just use account 0 of the buidler node to deploy
         (you can put in a mnemonic here to set the deployer locally)
       */
+    //  accounts: {
+    //   mnemonic: "exist trophy brass duck charge enact proof decrease grace smile soon session",
+    // },
     },
     rinkeby: {
       url: "https://rinkeby.infura.io/v3/c954231486fa42ccb6d132b406483d14", //<---- YOUR INFURA ID! (or it won't work)

@@ -26,7 +26,7 @@
   },
   "scripts": {
     "chain": "buidler node",
-    "test": "buidler test --network buidlerevm",
+    "test": "buidler test --network local",
     "compile": "buidler compile",
     "lp": "buidler run scripts/deploy_vnftLp.js && buidler run scripts/publish.js",
     "lp2": "buidler run scripts/deploy_vnftLp2.js && buidler run scripts/publish.js",
@@ -34,6 +34,8 @@
     "watch": "node scripts/watch.js",
     "accounts": "buidler accounts",
     "balance": "buidler balance",
-    "send": "buidler send"
+    "send": "buidler send",
+    "airdrop": "buidler test test/airdrop.js"
   }
 }
+

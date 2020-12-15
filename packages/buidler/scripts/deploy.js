@@ -72,7 +72,7 @@ async function main() {
   await VNFT.createItem("cheat", 1, 10000, threeDays);
   console.log("🚀 added item diamond \n");
 
-  await VNFT.mint("0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266");
+  await VNFT.mint("0xc783df8a850f42e7f7e57013759c285caa701eb6");
   console.log("🚀 Minted one vNFT to for test \n");
 
   await MuseToken.approve(VNFT.address, "100000000000000000000000000000000000");
@@ -267,15 +267,15 @@ async function main() {
   hp = await VNFTx.getHp(0);
   console.log("hp: ", hp.toString());
 
-  // test unlocked addon
-  let transferLocked = await VNFTx.removeAddon(0, 2);
+  // // test unlocked addon
+  // let transferLocked = await VNFTx.removeAddon(0, 2);
 
-  console.log("transfered unlocked", transferLocked);
+  // console.log("transfered unlocked", transferLocked);
 
   // test locked addon
-  transferLocked = await VNFTx.removeAddon(0, 1);
+  // transferLocked = await VNFTx.removeAddon(0, 1);
 
-  console.log("transfered lock", transferLocked);
+  // console.log("transfered lock", transferLocked);
 
   // return balance of
   const listSize = await VNFTx.addonsBalanceOf(0);

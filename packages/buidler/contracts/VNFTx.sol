@@ -149,8 +149,8 @@ contract VNFTx is Ownable, ERC1155Holder {
     uint256 public healthGemPrice = 13 * 10**18;
     uint256 public healthGemDays = 1;
 
-    // premium hp is the min requirement for premium features.
-    uint256 public premiumHp = 90;
+    // premium hp is the min requirement for premium features. "changed this to zero to fix raise your HP" uint256 public premiumHp = 90;
+    uint256 public premiumHp = 0;
     uint256 public hpMultiplier = 70;
     uint256 public rarityMultiplier = 15;
     uint256 public addonsMultiplier = 15;
@@ -276,11 +276,11 @@ contract VNFTx is Ownable, ERC1155Holder {
         notPaused
     {
         Addon storage _addon = addon[addonId];
-
-        require(
-            getHp(_nftId) >= _addon.requiredhp,
-            "Raise your HP to buy this addon"
-        );
+//commented this out to try fix "raise your HP"
+        // require(
+        //     getHp(_nftId) >= _addon.requiredhp,
+        //     "Raise your HP to buy this addon"
+        // );
         require(
             // @TODO double check < or <=
             _addon.used < addons.balanceOf(address(this), addonId),
